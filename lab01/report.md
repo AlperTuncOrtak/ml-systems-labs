@@ -8,7 +8,7 @@ Set up a reproducible Python environment with pinned dependencies, train two bas
 
 - **Environment:** Python 3.11.8 (via pyenv) in an isolated `.venv`, packages pinned in `requirements.txt`. Versions are recorded in `results/versions.txt`.
 - **Hardware:** Apple Silicon MacBook Pro (arm64), macOS 26.
-- **Data:** `load_breast_cancer` (569 samples, 30 features), 70/30 stratified split with `random_state=42` (398 train / 171 test). Seeds fixed with `random` and `numpy`.
+- **Data:** `load_breast_cancer` (569 samples, 30 features), 70/30 stratified split with `random_state=42` (398 train / 171 test). Seeds fixed with `random` and `numpy`; torch seeds are set in `train_baselines.py` but torch is not imported in `measure_system.py`, because it is unused in this lab and importing it would add 100+ MB to the measured process memory.
 - **Models:** `LogisticRegression(max_iter=1000, random_state=42)` and `RandomForestClassifier(n_estimators=100, random_state=42)`, default settings otherwise, no feature scaling.
 - **Training time:** 1 warm-up fit, then median of 5 timed fits (`time.perf_counter`).
 - **Inference latency:** single test sample, 1 warm-up, then median of 100 timed predictions.
