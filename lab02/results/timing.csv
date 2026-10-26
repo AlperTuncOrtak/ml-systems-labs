@@ -1,0 +1,5 @@
+width,batch,forward_ms,backward_ms,bwd_fwd_ratio,forward_matmul_ms,backward_matmul_ms,matmul_bwd_fwd_ratio,theoretical_MAC_ratio,forward_matmul_share,backward_matmul_share,forward_MACs,backward_MACs
+16,32,0.0097,0.0109,1.13,0.0033,0.005,1.5,1.29,0.34,0.46,46080,59392
+16,1257,0.1636,0.26,1.59,0.0813,0.2063,2.54,1.29,0.5,0.79,1810080,2332992
+64,32,0.032,0.0321,1.0,0.0222,0.0251,1.13,1.54,0.69,0.78,282624,434176
+64,1257,0.9443,0.9157,0.97,0.4156,0.8026,1.93,1.54,0.44,0.88,11101824,17054976
