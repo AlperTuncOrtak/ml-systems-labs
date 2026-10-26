@@ -1,0 +1,4 @@
+model,test_acc,train_time_s
+MLP,0.8772,7.1
+CNN,0.8982,42.3
+Attention,0.8571,36.3

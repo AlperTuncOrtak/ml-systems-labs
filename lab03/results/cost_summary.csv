@@ -1,0 +1,4 @@
+model,params,hand_FLOPs,thop_MACs,thop_FLOPs_x2,thop_vs_hand_pct,latency_b1_ms,latency_b128_ms,per_sample_b128_ms
+MLP,235146,469504,234752,469504,100.0,0.0146,0.0701,0.0005
+CNN,20490,2063488,1031744,2063488,100.0,0.0745,6.6008,0.0516
+Attention,71818,2329856,50816,101632,4.4,0.1379,4.0926,0.032

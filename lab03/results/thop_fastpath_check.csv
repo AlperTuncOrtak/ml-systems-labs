@@ -1,0 +1,3 @@
+mha_fastpath_enabled,thop_MACs,thop_FLOPs_x2,pct_of_hand
+True,50816,101632,4.4
+False,591488,1182976,50.8

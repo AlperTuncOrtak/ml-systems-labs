@@ -1,0 +1,19 @@
+model,layer,type,hand_FLOPs
+MLP,Linear 784->256,Linear,401408
+MLP,Linear 256->128,Linear,65536
+MLP,Linear 128->10,Linear,2560
+CNN,Conv1 1->16 @28x28,Conv2d,225792
+CNN,Conv2 16->32 @14x14,Conv2d,1806336
+CNN,Linear 1568->10,Linear,31360
+Attention,Patch proj 49->64 (x16 patches),Linear,100352
+Attention,L1 QKV projections,Attention,393216
+Attention,L1 scores Q.K^T,Attention,32768
+Attention,L1 weights x V,Attention,32768
+Attention,L1 output projection,Attention,131072
+Attention,L1 FFN 64->128->64,Linear,524288
+Attention,L2 QKV projections,Attention,393216
+Attention,L2 scores Q.K^T,Attention,32768
+Attention,L2 weights x V,Attention,32768
+Attention,L2 output projection,Attention,131072
+Attention,L2 FFN 64->128->64,Linear,524288
+Attention,Head 64->10,Linear,1280
