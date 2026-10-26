@@ -19,3 +19,4 @@ Each lab has its own folder with `report.md`, `src/` (code) and `results/` (outp
 | [lab01](lab01/report.md) | Environment and first system measurements |
 | [lab02](lab02/report.md) | A neural network from scratch |
 | [lab03](lab03/report.md) | Architectures and their costs |
+| [lab03](lab03/report.md) | Architectures and their costs |
