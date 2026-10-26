@@ -1,0 +1,5 @@
+Expected untrained loss: ln(10) = 2.3026
+W=16 | train | loss = 2.3021 | diff from ln(10) = 4.58e-04 | prob range [0.0845, 0.1093]
+W=16 | test  | loss = 2.3019 | diff from ln(10) = 6.74e-04 | prob range [0.0848, 0.1102]
+W=64 | train | loss = 2.3184 | diff from ln(10) = 1.58e-02 | prob range [0.0648, 0.1362]
+W=64 | test  | loss = 2.3200 | diff from ln(10) = 1.74e-02 | prob range [0.0637, 0.1318]

@@ -1,8 +1,8 @@
 import numpy as np
 
 
-def init_params(width, n_in=64, n_out=10, std=0.01):
-    """Weights ~ N(0, std), biases = 0."""
+def init_params(width, n_in=64, n_out=10, std=0.1):
+    """Weights ~ N(0, 0.01) i.e. variance 0.01, std 0.1. Biases = 0."""
     return {
         "W1": np.random.normal(0, std, (n_in, width)),
         "b1": np.zeros(width),
@@ -32,3 +32,8 @@ def forward(params, X):
     probs = softmax(z3)
     cache = {"X": X, "z1": z1, "a1": a1, "z2": z2, "a2": a2, "probs": probs}
     return probs, cache
+
+
+def cross_entropy(probs, Y):
+    """Mean cross-entropy. Y is one-hot. Clip avoids log(0)."""
+    return -np.mean(np.sum(Y * np.log(np.clip(probs, 1e-12, 1.0)), axis=1))
