@@ -82,3 +82,7 @@ The operations thop never counts add up to 1,179,648 FLOPs, which is 50.6% of th
 ## Hand-written work
 
 ![FLOP calculations](results/hand_flops.jpg)
+
+## Hand-written work
+
+![FLOP calculations](results/hand_flops.jpg)
