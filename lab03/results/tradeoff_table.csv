@@ -1,0 +1,4 @@
+model,params,hand_FLOPs,test_acc,latency_b1_ms,latency_b128_ms,per_sample_b128_ms,GFLOPs_per_s_b128,acc_per_100k_params,train_time_s
+MLP,235146,469504,0.8772,0.0146,0.0701,0.0005,857.3,0.373,7.1
+CNN,20490,2063488,0.8982,0.0745,6.6008,0.0516,40.0,4.384,42.3
+Attention,71818,2329856,0.8571,0.1379,4.0926,0.032,72.9,1.193,36.3
