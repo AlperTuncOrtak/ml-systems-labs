@@ -1,0 +1,45 @@
+generated_utc: '2026-11-02T16:56:21+00:00'
+config:
+  dataset:
+    name: adult
+    version: 2
+    expected_rows: 48842
+    expected_cols: 15
+    target: class
+    positive_label: '>50K'
+  split:
+    test_size: 0.3
+    random_state: 42
+  cleaning:
+    clip_lower_pct: 1
+    clip_upper_pct: 99
+    numeric_impute: median
+    categorical_impute: most_frequent
+  seed: 42
+schema_sha256: 94de5a1cf6384c5039c3063eafcc80eef00b6d28a4c2da10378052051549935a
+raw_sha256: 02a7bbc4a27c04e1d48193362caf1e3cecb4b700c4c09fff7ffbd11a70db11a2
+processed_sha256: 62edffb015ff7ebfda4c89fb9b8860b65371baf68269b4dc492b9eefc11dbdf5
+processed_files:
+  X_train.npy:
+    sha256: 36681850760e76e43302cd059a56fe20c919be220aa0c8eaf6e9659d41ddef43
+    shape:
+    - 34165
+    - 107
+  X_test.npy:
+    sha256: dfe1239e7d71bc299ef73825944367fa33a68da648fa5f9654b9232c20a0ff42
+    shape:
+    - 14653
+    - 107
+  y_train.npy:
+    sha256: b986e1bfbf636cd6342ab81ac7c2a7e9e24933a7834e44d76dd26ae6bc8c2758
+    shape:
+    - 34165
+  y_test.npy:
+    sha256: b8a710931d49ee31c5f9d3bcdd8e813f4e43d2349d35dcf5253e91473aafbcd6
+    shape:
+    - 14653
+environment:
+  python: 3.11.8
+  numpy: 1.26.4
+  pandas: 2.2.2
+  scikit-learn: 1.5.0
