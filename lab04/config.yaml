@@ -1,0 +1,16 @@
+dataset:
+  name: adult
+  version: 2
+  expected_rows: 48842
+  expected_cols: 15
+  target: class
+  positive_label: ">50K"
+split:
+  test_size: 0.3
+  random_state: 42
+cleaning:
+  clip_lower_pct: 1
+  clip_upper_pct: 99
+  numeric_impute: median
+  categorical_impute: most_frequent
+seed: 42
