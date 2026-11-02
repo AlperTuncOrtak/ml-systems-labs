@@ -1,0 +1,9 @@
+feature,p1_train,p99_train
+age,17.0,74.0
+fnlwgt,27035.2,509629.0
+education-num,3.0,16.0
+capital-gain,0.0,15024.0
+capital-loss,0.0,1980.0
+hours-per-week,8.0,80.0
+capital_net,-1980.0,15024.0
+hours_per_age,0.20833333333333334,20.0

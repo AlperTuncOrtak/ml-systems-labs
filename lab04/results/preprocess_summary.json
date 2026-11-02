@@ -1,0 +1,10 @@
+{
+  "raw_rows": 48842,
+  "train_rows_before_dedupe": 34189,
+  "duplicates_removed_from_train": 24,
+  "train_rows": 34165,
+  "test_rows": 14653,
+  "processed_features": 107,
+  "positive_rate_train": 0.2394,
+  "positive_rate_test": 0.2393
+}
