@@ -20,3 +20,4 @@ Each lab has its own folder with `report.md`, `src/` (code) and `results/` (outp
 | [lab02](lab02/report.md) | A neural network from scratch |
 | [lab03](lab03/report.md) | Architectures and their costs |
 | [lab04](lab04/report.md) | Data pipeline and quality |
+| [lab05](lab05/report.md) | Frameworks and automatic differentiation |
