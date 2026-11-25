@@ -1,0 +1,5 @@
+batch,mode,median_ms,speedup_vs_eager
+1,eager,0.0105,1.0
+1,jit.trace,0.0063,1.68
+256,eager,0.0391,1.0
+256,jit.trace,0.0342,1.14

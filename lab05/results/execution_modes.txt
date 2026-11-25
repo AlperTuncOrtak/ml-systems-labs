@@ -1,0 +1,45 @@
+== FX graph (operations PyTorch records for this model) ==
+graph():
+    %x : [num_users=1] = placeholder[target=x]
+    %fc1 : [num_users=1] = call_module[target=fc1](args = (%x,), kwargs = {})
+    %relu : [num_users=1] = call_function[target=torch.relu](args = (%fc1,), kwargs = {})
+    %fc2 : [num_users=1] = call_module[target=fc2](args = (%relu,), kwargs = {})
+    %relu_1 : [num_users=1] = call_function[target=torch.relu](args = (%fc2,), kwargs = {})
+    %fc3 : [num_users=1] = call_module[target=fc3](args = (%relu_1,), kwargs = {})
+    return fc3
+== Autograd graph: grad_fn chain from the output back to the input ==
+SumBackward0
+  AddmmBackward0
+    ReluBackward0
+      AddmmBackward0
+        ReluBackward0
+          AddmmBackward0
+            TBackward0
+torch.compile unsupported here: BackendCompilerFailed: backend='inductor' raised:
+CppCompileError: C++ compile error
+
+Command:
+clang++ /var/folders/wh/2jb2dsjn229dd1z0ygnmrs_w
+torch.compile unsupported here: BackendCompilerFailed: backend='inductor' raised:
+CppCompileError: C++ compile error
+
+Command:
+clang++ /var/folders/wh/2jb2dsjn229dd1z0ygnmrs_w
+
+== Eager vs compiled (median of 100 runs after warm-up) ==
+ batch      mode  median_ms  speedup_vs_eager
+     1     eager     0.0105              1.00
+     1 jit.trace     0.0063              1.68
+   256     eager     0.0391              1.00
+   256 jit.trace     0.0342              1.14
+
+== Tensor properties ==
+x      shape=(2048, 2048) dtype=torch.float32 stride=(2048, 1) contiguous=True shares_memory_with_x=True
+x.t()  shape=(2048, 2048) dtype=torch.float32 stride=(1, 2048) contiguous=False shares_memory_with_x=True
+
+== Contiguous vs non-contiguous (2048 x 2048 float32) ==
+            operation  contiguous_ms  non_contiguous_ms  slowdown
+elementwise x * 2 + 1          0.575              0.578      1.01
+      row sum (dim=1)          0.175              0.327      1.87
+         matmul t @ x          8.827             12.510      1.42
+cost of making x.t() contiguous (copy): 1.886 ms

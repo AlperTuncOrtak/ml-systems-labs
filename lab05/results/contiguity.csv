@@ -1,0 +1,4 @@
+operation,contiguous_ms,non_contiguous_ms,slowdown
+elementwise x * 2 + 1,0.575,0.578,1.01
+row sum (dim=1),0.175,0.327,1.87
+matmul t @ x,8.827,12.51,1.42
