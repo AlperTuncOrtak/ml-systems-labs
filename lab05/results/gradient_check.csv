@@ -1,0 +1,4 @@
+input,max_abs_diff_vs_pytorch,max_abs_diff_vs_numeric,pass
+a,0.0,9.894929320353185e-11,True
+b,0.0,1.1871037486343994e-10,True
+c,0.0,7.835043724924162e-11,True

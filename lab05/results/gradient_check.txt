@@ -1,0 +1,8 @@
+forward value: ours 13.5184535429 | pytorch 13.5184535429
+graph nodes: 97
+input  max_abs_diff_vs_pytorch  max_abs_diff_vs_numeric  pass
+    a                 0.00e+00                 9.89e-11  True
+    b                 0.00e+00                 1.19e-10  True
+    c                 0.00e+00                 7.84e-11  True
+accumulation check d(x*x)/dx at x=3: 6.0 (expected 6.0) -> PASS
+OVERALL: PASS
